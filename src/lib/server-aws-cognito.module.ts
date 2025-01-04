@@ -3,6 +3,7 @@ import { DynamicModule, Module } from '@nestjs/common';
 import { moduleFactory } from '@onivoro/server-common';
 import { ServerAwsCognitoConfig } from './server-aws-cognito-config.class';
 import { CognitoTokenValidatorService } from './services/cognito-token-validator.service';
+import { CognitoRefreshTokenService } from './services/cognito-refresh-token.service';
 
 @Module({})
 export class ServerAwsCognitoModule {
@@ -21,6 +22,7 @@ export class ServerAwsCognitoModule {
           })
         },
         CognitoTokenValidatorService,
+        CognitoRefreshTokenService,
       ],
       module: ServerAwsCognitoModule,
     });
