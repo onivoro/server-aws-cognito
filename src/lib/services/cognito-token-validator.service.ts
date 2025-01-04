@@ -85,7 +85,7 @@ export class CognitoTokenValidatorService implements OnModuleInit {
     }
 
     private async getJWKS(): Promise<typeof CognitoTokenValidatorService.prototype.jwks> {
-        if (this.jwks) {
+        if (this.jwks?.keys?.length) {
             return this.jwks;
         }
 
