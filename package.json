@@ -1,0 +1,51 @@
+{
+    "name": "@onivoro/server-aws-cognito",
+    "version": "22.0.0",
+    "repository": {
+        "url": "git+https://github.com/onivoro/server-aws-cognito.git"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "files": [
+        "dist/*"
+    ],
+    "scripts": {
+        "onx": "onx",
+        "build": "onx Build",
+        "deploy": "onx Publish",
+        "test": "onx Test",
+        "update": "onx Update"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "require": "./dist/cjs/index.js",
+            "import": "./dist/esm/index.js",
+            "default": "./dist/esm/lib.js"
+        }
+    },
+    "onx": {
+        "platform": "server"
+    },
+    "devDependencies": {
+        "@onivoro/cli": "^22.0.8",
+        "@types/jest": "*",
+        "@types/jsonwebtoken": "^9.0.7",
+        "@types/jwk-to-pem": "^2.0.3",
+        "@types/node": "22.10.0",
+        "typescript": "*"
+    },
+    "engines": {
+        "node": "22.10.0",
+        "npm": "10.9.0"
+    },
+    "dependencies": {
+        "@aws-sdk/client-cognito-identity-provider": "^3.721.0",
+        "@nestjs/common": "^10.4.15",
+        "@nestjs/swagger": "^8.1.0",
+        "@onivoro/server-common": "^22.0.6",
+        "jsonwebtoken": "^9.0.2",
+        "jwk-to-pem": "^2.0.7"
+    }
+}
